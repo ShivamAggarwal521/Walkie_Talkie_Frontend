@@ -8,7 +8,9 @@
     "splash": {
       "backgroundColor": "#1c1c1e"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
@@ -16,7 +18,16 @@
       }
     },
     "android": {
-      "permissions": ["RECORD_AUDIO"]
-    }
+      "permissions": [
+        "RECORD_AUDIO"
+      ],
+      "package": "com.shivam521.walkietalkieapp"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5e429b00-3951-4f28-bcdb-8179c0a5d35b"
+      }
+    },
+    "owner": "shivam521"
   }
 }
