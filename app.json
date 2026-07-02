@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Walkie Talkie",
+    "slug": "walkie-talkie-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#1c1c1e"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app needs access to your microphone to send voice messages."
+      }
+    },
+    "android": {
+      "permissions": ["RECORD_AUDIO"]
+    }
+  }
+}
