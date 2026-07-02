@@ -24,7 +24,7 @@ import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 // It must be your computer's LAN IP (not "localhost") when testing
 // on a physical phone with Expo Go, e.g. "http://192.168.1.20:3001"
 // ------------------------------------------------------------------
-const DEFAULT_SERVER_URL = "";
+const DEFAULT_SERVER_URL = "https://walkie-talkie-backend-1.onrender.com";
 
 export default function App() {
   const [screen, setScreen] = useState("join"); // "join" | "channel"
@@ -68,7 +68,7 @@ export default function App() {
       return;
     }
 
-    const socket = io(serverUrl.trim(), {
+    const socket = io(DEFAULT_SERVER_URL, {
       transports: ["websocket"],
       reconnectionAttempts: 5,
     });
@@ -194,12 +194,13 @@ export default function App() {
           <Text style={styles.label}>Server URL</Text>
           <TextInput
             style={styles.input}
-            placeholder="http://192.168.1.20:3001"
+            placeholder="https://walkie-talkie-backend-1.onrender.com"
             placeholderTextColor="#888"
             autoCapitalize="none"
             autoCorrect={false}
-            value={serverUrl}
-            onChangeText={setServerUrl}
+            value={DEFAULT_SERVER_URL}
+            editable={false}
+            selectTextOnFocus={false}
           />
 
           <Text style={styles.label}>Your name</Text>
